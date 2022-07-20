@@ -32,6 +32,7 @@ export const Label = styled.label`
   top: 40px;
   left: 20%;
   transition: left 0.25s ease-out;
+  z-index: -1;
 `;
 
 export const Input = styled.input`
@@ -68,6 +69,7 @@ export const InputWrapper = styled.div`
 `;  
 
 export const LabelHolder = styled.div`
+  z-index: -2;
   box-sizing: border-box;
   position: absolute;
   background: ${theme.color};
