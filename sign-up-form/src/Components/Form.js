@@ -2,23 +2,13 @@ import { Input,InputWrapper, Label, LabelHolder } from "./Form.styles";
 import styled, {css} from "styled-components";
 
 const Form = () => {
-  const gradient = css`
-  background-image: linear-gradient(
-    90deg,
-    hsl(240deg 100% 20%) 0%,
-    hsl(306deg 100% 12%) 33%,
-    hsl(11deg 100% 4%) 71%,
-    hsl(352deg 97% 19%) 95%,
-    hsl(332deg 94% 33%) 100%
-  );
-`;
 
   const Formdiv = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     padding: 15px;
     gap: 10px 0px;
-    background-image: ${gradient};
+    max-height: fit-content;
   `;
 
   //remove above when ready

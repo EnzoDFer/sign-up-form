@@ -18,6 +18,7 @@ const gradient = css`
 const labelActivate = css`
   left: 15px;
   word-spacing: 100vw;
+  font-weight: bold;
 `;
 
 const labelHolderActivate = css`
@@ -33,6 +34,11 @@ export const Label = styled.label`
   left: 20%;
   transition: left 0.25s ease-out;
   z-index: -1;
+
+  ${Input}:focus + &&,
+  ${Input}:not(:placeholder-shown) + && {
+    ${labelActivate};
+  }
 `;
 
 export const Input = styled.input`
@@ -42,30 +48,20 @@ export const Input = styled.input`
   height: 100px;
   width: 100%;
   background: transparent;
-  border: 4px solid ${theme.color};
+  border: 4px solid  ${theme.color};
   border-radius: 8px; 
   transition: all 0.25s linear;
+
   &:focus {
-    border: 6px solid ${theme.color};
+    border: 6px solid  ${theme.color};
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
-    & ~ label {
-      ${labelActivate};
-    }
-    & ~ div {
-      ${labelHolderActivate}
-    }
-  }
-  &:not(:placeholder-shown) ~ label {
-    ${labelActivate}
-  }
-  &:not(:placeholder-shown) ~ div {
-    ${labelHolderActivate}
   }
 `;
 
 export const InputWrapper = styled.div`
   box-sizing: border-box;
   position: relative;
+  border-radius: 8px;
 `;  
 
 export const LabelHolder = styled.div`
@@ -79,4 +75,9 @@ export const LabelHolder = styled.div`
   border-radius: 8px;
   opacity: 0;
   transition: all 0.25s ease-in;
+
+  ${Input}:focus + &&,
+  ${Input}:not(:placeholder-shown) + && {
+    ${labelHolderActivate};
+  }
 `;
