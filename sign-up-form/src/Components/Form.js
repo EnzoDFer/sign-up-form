@@ -1,38 +1,36 @@
-import { Input,InputWrapper, Label, LabelHolder } from "./Form.styles";
-import styled, {css} from "styled-components";
+import { Input,InputWrapper,Label,LabelHolder,Fieldset,Legend,SubmitButton } from "./Form.styles";
 
 const Form = () => {
-
-  const Formdiv = styled.div`
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    padding: 15px;
-    gap: 10px 0px;
-    max-height: fit-content;
-  `;
-
-  //remove above when ready
   return (
-    <Formdiv>
-      <Form.EmailInput id='email' label='Email' />
-      <Form.TextInput id='Name' label='First Name' />
-      <Form.PhoneInput id='phone' label='Phone #:'/>
-    </Formdiv>
+    <form>
+      <Legend>Sign up Now!</Legend>
+      <Fieldset>
+        <Form.TextInput id='firstName' label='First Name' />
+        <Form.TextInput id='lastName' label='Last Name' />
+        <Form.EmailInput id='email' label='Email' />
+        <Form.PhoneInput id='phone' label='Phone #'/>
+        <Form.PasswordInput id='password' label='Enter Password'/> 
+        <Form.PasswordInput id='confirmPassword' label='Confirm Password'/> 
+      </Fieldset>
+      <SubmitButton type="submit" value="Create Account" />
+    </form>
   );
 }
 
-Form.PhoneInput = ({...props}) => <InputTemplate type='tel' placeholder=' ' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title='ex: ###-###-####' {...props} />;
+Form.PhoneInput = ({...props}) => <InputTemplate type='tel' placeholder=' ' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title='ex: ###-###-####' required {...props} />;
 
-Form.EmailInput = ({...props}) => <InputTemplate type='email' placeholder=' ' Required {...props} />;
+Form.EmailInput = ({...props}) => <InputTemplate type='email' placeholder=' ' required {...props} />;
 
-Form.TextInput = ({...props}) => <InputTemplate type='text' placeholder=' ' {...props} />;
+Form.TextInput = ({...props}) => <InputTemplate type='text' placeholder=' ' required {...props} />;
+
+Form.PasswordInput = ({...props}) => <InputTemplate type='password' placeholder=' ' {...props} required/>;
 
 const InputTemplate = ({type,id,label,...props}) => {
   return (
     <InputWrapper>
       <Input type={type} id={id} {...props}  />
       <LabelHolder/>
-      <Label HTMLfor={id}  isRequired>{label}</Label>
+      <Label htmlFor={id}  isRequired>{label}</Label>
     </InputWrapper> 
   );
 };
