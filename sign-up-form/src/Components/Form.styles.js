@@ -22,20 +22,21 @@ export const Legend = styled.legend`
 `;
 
 const labelActivate = css`
-  left: 15px;
+  left: 5%;
   word-spacing: 100vw;
   font-weight: bold;
+  font-size: 16px;
 `;
 
 const labelHolderActivate = css`
   opacity: 1;
-  width: 100px;
+  width: 20%;
 `;
 
 export const Input = styled.input`
   all: unset;
   box-sizing: border-box;
-  padding: 10px 0 0 20%;
+  padding-left: 20%;
   height: 100px;
   width: 100%;
   background: transparent;
