@@ -30,13 +30,13 @@ const labelActivate = css`
 
 const labelHolderActivate = css`
   opacity: 1;
-  width: 20%;
+  width: 25%;
 `;
 
 export const Input = styled.input`
   all: unset;
   box-sizing: border-box;
-  padding-left: 20%;
+  padding-left: 25%;
   height: 100px;
   width: 100%;
   background: transparent;
@@ -105,4 +105,10 @@ export const Fieldset = styled.fieldset`
   grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: repeat(3, 1fr); 
   gap: 10px 40px; 
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: none;
+  }
 `;
