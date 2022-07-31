@@ -28,6 +28,12 @@ export const Legend = styled.legend`
   font-weight: bolder;
   font-size: ${font.xxlarge};
   margin-left: 2rem;
+  display: block;
+  background: ${theme.color};
+  width: fit-content;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(0,0,0,0.2);
 `;
 
 const labelHolderActivate = css`
