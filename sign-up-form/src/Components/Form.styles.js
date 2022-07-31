@@ -63,10 +63,10 @@ export const Input = styled.input`
 export const SubmitButton = styled(Input)`
   background: ${theme.color};
   text-align: center;
-  width: 40%;
+  width: 35%;
   top: calc(100% + 2rem);
-  font-size: ${font.large}; 
-  padding: ${font.large};
+  font-size: ${font.xlarge}; 
+  padding: ${font.xlarge};
   margin-left: 1rem;
   min-width: fit-content;
   border: rgba(0, 0, 0, 0.1) 1px solid;
