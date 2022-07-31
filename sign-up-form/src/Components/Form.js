@@ -1,8 +1,8 @@
-import { Input,InputWrapper,Label,LabelHolder,Fieldset,Legend,SubmitButton } from "./Form.styles";
+import { Input,InputWrapper,Label,LabelHolder,Fieldset,Legend,SubmitButton,StyledForm } from "./Form.styles";
 
-const Form = () => {
+const Form = ({...props}) => {
   return (
-    <form>
+    <StyledForm {...props}>
       <Legend>Sign up Now!</Legend>
       <Fieldset>
         <Form.TextInput id='firstName' label='First Name' />
@@ -13,7 +13,7 @@ const Form = () => {
         <Form.PasswordInput id='confirmPassword' label='Confirm Password'/> 
       </Fieldset>
       <SubmitButton type="submit" value="Create Account" />
-    </form>
+    </StyledForm>
   );
 }
 

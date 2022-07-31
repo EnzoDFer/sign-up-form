@@ -24,9 +24,9 @@ const device = {
 }
 
 export const Legend = styled.legend`
-  margin-bottom: 20px;
+  margin-bottom: ${font.medium};
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: ${font.xxlarge};
   margin-left: 2rem;
 `;
 
@@ -57,9 +57,12 @@ export const Input = styled.input`
 export const SubmitButton = styled(Input)`
   background: ${theme.color};
   text-align: center;
-  padding: 0px;
-  width: 20%;
-  margin: 16px 8px 8px 8px;
+  width: 40%;
+  top: calc(100% + 2rem);
+  font-size: ${font.large}; 
+  padding: ${font.large};
+  margin-left: 1rem;
+  min-width: fit-content;
   border: rgba(0, 0, 0, 0.1) 1px solid;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
 `;
@@ -100,6 +103,8 @@ export const LabelHolder = styled.div`
 `;
 
 export const Fieldset = styled.fieldset`
+  all: unset;
+  padding: ${font.small}; 
   display: grid; 
   grid-auto-columns: 1fr; 
   grid-template-columns: repeat(2, 1fr); 
@@ -109,5 +114,14 @@ export const Fieldset = styled.fieldset`
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-template-columns: none;
+  }
+`;
+
+export const StyledForm = styled.form`
+  position: relative;
+  padding: 0.4rem;
+  box-shadow: 0 0.5rem 1rem rgb(0,0,0,0.2);
+  @media (min-width: 1024px) {
+    padding: 1rem 8rem 1rem 2rem;
   }
 `;
