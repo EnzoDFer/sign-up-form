@@ -29,8 +29,9 @@ const InputTemplate = ({type,id,label,...props}) => {
   return (
     <InputWrapper>
       <Input type={type} id={id} {...props}  />
-      <LabelHolder/>
-      <Label htmlFor={id}  isRequired>{label}</Label>
+      <LabelHolder>
+        <Label htmlFor={id}  isRequired>{label}</Label>
+      </LabelHolder>
     </InputWrapper> 
   );
 };
