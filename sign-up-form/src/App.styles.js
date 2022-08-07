@@ -14,6 +14,10 @@ export const Main = styled.div`
 export const BannerWrapper = styled.div`
   background: yellow;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 `;
 
 export const ContentWrapper = styled.div`
