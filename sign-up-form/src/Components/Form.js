@@ -12,7 +12,7 @@ const Form = ({...props}) => {
         <Form.PasswordInput id='password' label='Enter Password'/> 
         <Form.PasswordInput id='confirmPassword' label='Confirm Password'/> 
       </Fieldset>
-      <SubmitButton type="submit" value="Create Account" />
+      <SubmitButton type="submit" value='Create Account'/>
     </StyledForm>
   );
 }

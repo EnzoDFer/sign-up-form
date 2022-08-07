@@ -46,7 +46,10 @@ export const Input = styled.input`
   all: unset;
   box-sizing: border-box;
   padding-left: 25%;
-  height: 100px;
+  height: 2.5rem;
+  @media (min-width: 2000px) {
+    height: 5rem;
+  }
   width: 100%;
   position: absolute;
   z-index: 2;
@@ -64,18 +67,18 @@ export const SubmitButton = styled(Input)`
   background: ${theme.color};
   text-align: center;
   width: 35%;
+  height:15%;
   top: calc(100% + 2rem);
   font-size: ${font.xlarge}; 
   padding: ${font.xlarge};
   margin-left: 1rem;
   min-width: fit-content;
   border: rgba(0, 0, 0, 0.1) 1px solid;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 `;
 
 
 export const Label = styled.label`
-  box-sizing: border-box;
   opacity: 0.5;
   transition: left 0.25s ease-out;
   max-width: min-content;
@@ -87,11 +90,13 @@ export const InputWrapper = styled.div`
   box-sizing: border-box;
   border-radius: 8px;
   position: relative;
-  height: 100px;
+  height: 2.5rem;
+  @media (min-width: 2000px) {
+    height: 5rem;
+  }
 `;  
 
 export const LabelHolder = styled.div`
-  box-sizing: border-box;
   background: transparent;
   height: 100%;
   width: 50%;
@@ -99,7 +104,7 @@ export const LabelHolder = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
   opacity: 1;
   transition: all 0.25s ease-in;
   ${Input}:focus + &&,
@@ -109,24 +114,28 @@ export const LabelHolder = styled.div`
 `;
 
 export const Fieldset = styled.fieldset`
+  box-sizing: border-box;
   all: unset;
   padding: ${font.small}; 
   display: grid; 
   grid-auto-columns: 1fr; 
   grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: repeat(3, 1fr); 
-  gap: 10px 40px; 
-  @media (max-width: 768px) {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: none;
+  gap: 0 4rem; 
+  height: 70%;
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-direction: space-between;
+    gap: 1rem;
   }
 `;
 
 export const StyledForm = styled.form`
+  box-sizing: border-box;
   position: relative;
   padding: 0.4rem;
-  box-shadow: 0 0.5rem 1rem rgb(0,0,0,0.2);
+  box-shadow: 0.5rem 0.5rem 1rem rgb(0,0,0,0.2);
   @media (min-width: 1024px) {
     padding: 1rem 8rem 1rem 2rem;
   }
