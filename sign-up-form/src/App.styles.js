@@ -57,4 +57,8 @@ export const Content = styled.div`
   padding: 2rem;
   font-size: 1.2rem;
   text-shadow: 0 0 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
 `;
