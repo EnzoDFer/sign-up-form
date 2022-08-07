@@ -32,11 +32,17 @@ export const Banner = styled.div`
 `;
 
 export const TitleBanner = styled.div`
-  height: 20%;
+  height: fit-content;
   width: 100%;
   background: rgb(0,0,0,0.4);
   position: absolute;
-  top: 30%;
+  top: 20%;
+  padding: 1rem;
+  font-size: 5rem;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb( 255,255,255,0.8);
+
 `;
 
 export const ContentWrapper = styled.div`

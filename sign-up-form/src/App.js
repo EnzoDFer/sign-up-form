@@ -1,5 +1,5 @@
 import Form from './Components/Form';
-import { BannerWrapper,Banner,Main,ContentWrapper,Content } from './App.styles';
+import { BannerWrapper,Banner, TitleBanner,Main,ContentWrapper,Content } from './App.styles';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
             backgroundImage={require('./images/Banner.png')}
           >
           </Banner>
+          <TitleBanner>Real Service</TitleBanner>
       </BannerWrapper>
       <ContentWrapper>
         <Content>
