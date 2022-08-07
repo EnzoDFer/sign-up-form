@@ -1,3 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" >
+<svg xmlns="http://www.w3.org/2000/svg" 
+  viewBox="-0.2 -13 11.5 32"
+  height='100%'
+  width='100%'
+  preserveAspectRatio='none'
+>
   <path d="M0 0 0-10Q5-15 10-10L10 0Q5 5 0 0M2-8 2-7C2-6 3-6 3-7L3-8C3-9 2-9 2-8M7-8 7-7C7-6 8-6 8-7L8-8C8-9 7-9 7-8M5-7C5-3 3-4 7-4 3-4 5-3 5-7M2-2C4-1 7-1 9-3 7-1 4-1 2-2" stroke="#000" stroke-width="0.1" fill="#DBA075"/>
 </svg>

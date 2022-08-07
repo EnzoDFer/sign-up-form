@@ -133,6 +133,7 @@ export const Fieldset = styled.fieldset`
 
 export const StyledForm = styled.form`
   box-sizing: border-box;
+  background: transparent;
   position: relative;
   padding: 0.4rem;
   box-shadow: 0.5rem 0.5rem 1rem rgb(0,0,0,0.2);

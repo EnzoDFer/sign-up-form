@@ -1,17 +1,14 @@
 import Form from './Components/Form';
-import { BannerWrapper,Main,ContentWrapper,Content } from './App.styles';
-import {ReactComponent as LogoHolder} from './Components/LogoHolder.svg';
-import {ReactComponent as LogoHead} from './Components/head.svg';
-import {ReactComponent as LogoHair} from './Components/hair.svg';
-import {ReactComponent as Logo} from './logo.svg';
+import { BannerWrapper,Banner,Main,ContentWrapper,Content } from './App.styles';
 
 function App() {
   return (
     <Main>
       <BannerWrapper>
-        <div>
-          <LogoHolder/>
-        </div>
+          <Banner 
+            backgroundImage={require('./images/Banner.png')}
+          >
+          </Banner>
       </BannerWrapper>
       <ContentWrapper>
         <Content></Content>
