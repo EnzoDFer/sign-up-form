@@ -15,14 +15,6 @@ const font = {
 }
 
 
-const device = {
-  desktop: 'screen (min-width: 768px)',
-  tablet: 'screen (min-width: 425px),(max-width: 768px)',
-  mobileL: 'screen (min-width: 375px),(max-width: 425px)',
-  mobileM: 'screen (min-width: 320px),(max-width: 375px)',
-  mobileS: 'screen (max-width: 375px)',
-}
-
 export const Legend = styled.legend`
   margin-bottom: ${font.medium};
   font-weight: bolder;
@@ -73,8 +65,13 @@ export const SubmitButton = styled(Input)`
   padding: ${font.xlarge};
   margin-left: 1rem;
   min-width: fit-content;
-  border: rgba(0, 0, 0, 0.1) 1px solid;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  ${props=>(props.disabled?
+    css`
+      border: 5px solid #BF3F3F;
+      color: #BF3F3F;
+    `:''
+  )};
 `;
 
 

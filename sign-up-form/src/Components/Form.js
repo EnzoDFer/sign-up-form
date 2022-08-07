@@ -1,6 +1,18 @@
+import { useState,useEffect } from "react";
 import { Input,InputWrapper,Label,LabelHolder,Fieldset,Legend,SubmitButton,StyledForm } from "./Form.styles";
 
 const Form = ({...props}) => {
+  const [passwordOne,setPasswordOne] = useState('1');
+  const [passwordTwo,setPasswordTwo] = useState('2');
+
+  const [disabled,setDisabled] = useState(true);
+
+  useEffect(()=> {
+    passwordOne===passwordTwo? 
+    setDisabled(false):
+    setDisabled(true)
+  },[passwordOne,passwordTwo]);
+
   return (
     <StyledForm {...props}>
       <Legend>Sign up Now!</Legend>
@@ -9,10 +21,18 @@ const Form = ({...props}) => {
         <Form.TextInput id='lastName' label='Last Name' />
         <Form.EmailInput id='email' label='Email' />
         <Form.PhoneInput id='phone' label='Phone #'/>
-        <Form.PasswordInput id='password' label='Enter Password'/> 
-        <Form.PasswordInput id='confirmPassword' label='Confirm Password'/> 
+        <Form.PasswordInput id='password' label='Enter Password'
+          onChange={(e)=>setPasswordOne(e.target.value)}
+        /> 
+        <Form.PasswordInput id='confirmPassword' label='Confirm Password'
+          onChange={(e)=>setPasswordTwo(e.target.value)}
+        /> 
       </Fieldset>
-      <SubmitButton type="submit" value='Create Account'/>
+      <SubmitButton 
+        type="submit" 
+        value={disabled?'Please match passwords':'Create Account'}
+        disabled={disabled}
+      />
     </StyledForm>
   );
 }
