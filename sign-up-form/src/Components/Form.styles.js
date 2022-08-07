@@ -60,10 +60,14 @@ export const SubmitButton = styled(Input)`
   text-align: center;
   width: 35%;
   height:15%;
+  @media (max-width: 350px) {
+    height:20%;
+  }
   top: calc(100% + 2rem);
   font-size: ${font.xlarge}; 
   padding: ${font.xlarge};
   margin-left: 1rem;
+  margin-right: 1rem;
   min-width: fit-content;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   ${props=>(props.disabled?
