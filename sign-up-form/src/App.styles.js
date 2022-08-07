@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 export const Main = styled.div`
   display: grid;
@@ -38,7 +38,7 @@ export const TitleBanner = styled.div`
   position: absolute;
   top: 20%;
   padding: 1rem;
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
   font-weight: bolder;
   color: rgb( 255,255,255,0.8);

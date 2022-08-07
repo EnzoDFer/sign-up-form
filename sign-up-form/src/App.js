@@ -9,7 +9,7 @@ function App() {
             backgroundImage={require('./images/Banner.png')}
           >
           </Banner>
-          <TitleBanner>Real Service</TitleBanner>
+          <TitleBanner>ENZODFER on GitHub</TitleBanner>
       </BannerWrapper>
       <ContentWrapper>
         <Content>
