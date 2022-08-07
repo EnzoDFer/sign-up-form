@@ -11,7 +11,12 @@ function App() {
           </Banner>
       </BannerWrapper>
       <ContentWrapper>
-        <Content></Content>
+        <Content>
+          <h1>HEY YOU!</h1>
+          <div>Yeah you! Don't you want to sign up below for my 100% not fake service that
+            totally wasnt created just as part of the <a href='https://www.theodinproject.com/'>Odin Project course.</a>
+          </div>
+        </Content>
         <Form/>
         <Content></Content>
       </ContentWrapper>

@@ -31,14 +31,24 @@ export const Banner = styled.div`
   background-repeat: no-repeat;
 `;
 
+export const TitleBanner = styled.div`
+  height: 20%;
+  width: 100%;
+  background: rgb(0,0,0,0.4);
+  position: absolute;
+  top: 30%;
+`;
+
 export const ContentWrapper = styled.div`
   display: grid;
   grid-template-rows: 0.4fr 0.4fr 0.2fr;
-  grid-template-columns: none;
+  grid-template-columns: auto;
   background: rgb(189, 198, 198,0.4);
-  
 `;
 
 export const Content = styled.div`
   background: transparent;
+  padding: 2rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 1px black;
 `;
